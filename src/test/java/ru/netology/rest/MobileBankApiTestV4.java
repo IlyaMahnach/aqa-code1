@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-class MobileBankApiTestV44 {
+class MobileBankApiTestV4 {
     @Test
     void shouldReturnDemoAccounts() {
       // Given - When - Then
@@ -18,7 +18,7 @@ class MobileBankApiTestV44 {
       // Проверки
       .then()
           .statusCode(200)
-          .body(matchesJsonSchemaInClasspath("accounts.schema.json1"))
+          .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
       ;
     }
 }
